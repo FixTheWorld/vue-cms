@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=apple-mobile-web-app-capable content=yes><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><title>Content Management System</title><link rel="shortcut icon" type=image/x-icon href=./static/favicon.ico><link href=./static/css/app.9058248c35aa57661e28deb1587850d0.css rel=stylesheet></head><body onload=preventScalable()><div id=app></div><script>function preventScalable() {
+    // 阻止双击放大
+    var lastTouchEnd = 0;
+    document.addEventListener('touchstart', function (event) {
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    });
+    document.addEventListener('touchend', function (event) {
+      var now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+
+    // 阻止双指放大
+    document.addEventListener('gesturestart', function (event) {
+      event.preventDefault();
+    });
+  }</script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.914ba0f4b699a8b5d0c2.js></script><script type=text/javascript src=./static/js/app.a4444d351b39baa3f626.js></script></body></html>
